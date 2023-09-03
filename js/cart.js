@@ -93,6 +93,13 @@ let checkOut = () => {
     updateBasketAmount()
     shoppingCart.innerHTML = ""
 
+    //Custom Event Tracking - Button Click
+    gtag('event', 'button_click', {
+        'event_category': 'interaction in cart',
+        'event_label': 'check-out from cart',
+        'value': 1
+    });
+    
 
 
 }
